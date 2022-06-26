@@ -3,10 +3,10 @@ services:
     container_name: backend
     image: backend
     build:
-      context: .
+      context: ./backend
       target: development
     volumes:
-      - .:/app
+      - ./backend:/app
     ports:
       - "3000:3000"
     depends_on:
