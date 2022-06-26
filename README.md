@@ -1,11 +1,12 @@
-## Setup
+# VOE-Quotes
 
-install golang-migrate https://github.com/golang-migrate/migrate
+## Getting Started
 
-In the frontend folder `npm install`
+Ensure that docker and docker compose are installed.
 
-### Run Migrations
+To get started developing, run `make dev`
 
-```run from root
-migrate -path migrations/ -database mysql://quotes:quotes@/quotes up
-```
+To initialize the database, in another terminal, run `make migrate`.
+This will setup the database schema
+
+For Frontend development, current you will need to run `npm install` from within the frontend folder.

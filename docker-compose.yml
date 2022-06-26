@@ -1,4 +1,16 @@
 services:
+  backend:
+    container_name: backend
+    image: backend
+    build:
+      context: .
+      target: development
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mariadb
   mariadb:
     image: mariadb:latest
     ports:

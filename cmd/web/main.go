@@ -23,7 +23,7 @@ func main() {
 	//address for starting server
 	addr := flag.String("addr", ":3000", "HTTP network address")
 	//dsn for database connection
-	dsn := flag.String("dsn", "quotes:quotes@/quotes?parseTime=true", "MariaDB DSN")
+	dsn := flag.String("dsn", "quotes:quotes@tcp(mariadb:3306)/quotes?parseTime=true", "MariaDB DSN")
 	flag.Parse()
 
 	infoLog := log.New(os.Stdout, "INFO\t", log.Ldate|log.Ltime)
