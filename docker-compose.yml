@@ -11,6 +11,8 @@ services:
       - "3000:3000"
     depends_on:
       - mariadb
+    env_file:
+      - ./backend/.env
   mariadb:
     image: mariadb:latest
     ports:
